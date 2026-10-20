@@ -1,0 +1,55 @@
+# 🎬 Generates ALL animated contribution graphics for the profile README:
+#   🕹️ Pac-Man + 🧱 Breakout arcade games   (abozanona/pacman-contribution-graph)
+#   🐍 Snake eating contributions          (Platane/snk)
+# Everything is published in ONE push to the `output` branch so the
+# animations never overwrite each other. (Replaces the old snake.yml)
+name: Generate Profile Animations
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch: # manual trigger from the Actions tab
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      # 1) Arcade games first (writes into ./dist)
+      - name: 🕹️ Generate arcade games (Pac-Man + Breakout)
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: "pacman,breakout"
+          # 💡 More games available: galaga, puzzle-bobble, bomberman, minesweeper
+
+      # 2) Snake into a separate folder so nothing gets cleaned/overwritten
+      - name: 🐍 Generate snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            snake-dist/snake.svg
+            snake-dist/snake-dark.svg?palette=github-dark
+
+      # 3) Merge everything into ./dist
+      - name: 🧩 Merge all animation outputs
+        run: |
+          mkdir -p dist
+          cp snake-dist/*.svg dist/
+          ls -la dist
+
+      # 4) Single push of the complete set to the `output` branch
+      - name: 🚀 Push animations to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
