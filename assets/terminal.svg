@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="330" viewBox="0 0 780 330" font-family="'Fira Code',Consolas,'Courier New',monospace">
+<defs>
+  <linearGradient id="bord" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7C3AED"/><stop offset="0.5" stop-color="#2563EB"/><stop offset="1" stop-color="#00D4FF"/>
+    <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="9s" repeatCount="indefinite"/>
+  </linearGradient>
+</defs>
+<rect x="3" y="3" width="774" height="324" rx="14" fill="#0B0F1A" stroke="url(#bord)" stroke-width="2.5"/>
+<rect x="3" y="3" width="774" height="40" rx="14" fill="#111827"/>
+<rect x="3" y="30" width="774" height="13" fill="#111827"/>
+<circle cx="28" cy="23" r="7" fill="#FF5F57"/><circle cx="52" cy="23" r="7" fill="#FEBC2E"/><circle cx="76" cy="23" r="7" fill="#28C840"/>
+<text x="390" y="28" text-anchor="middle" font-size="13" fill="#8B949E">Harshit@github : ~/profile</text>
+<g font-size="16">
+<animate attributeName="opacity" values="1;1;0;1" keyTimes="0;0.94;0.98;1" dur="10.0s" repeatCount="indefinite"/>
+<text x="28" y="82"><tspan fill="#00D4FF">$ </tspan><tspan fill="#E6EDF3">whoami</tspan></text>
+<rect x="105.0" y="65" width="87.0" height="24" fill="#0B0F1A">
+  <animate attributeName="x" calcMode="discrete" values="28.0;28.0;37.6;47.3;56.9;66.5;76.2;85.8;95.4;105.0;105.0" keyTimes="0.0000;0.0500;0.0588;0.0675;0.0762;0.0850;0.0938;0.1025;0.1112;0.1200;1.0000" dur="10.0s" repeatCount="indefinite"/>
+</rect>
+<text x="28" y="114" opacity="1"><tspan fill="#00D4FF">▸ </tspan><tspan fill="#A78BFA">Harshit Tripathi</tspan><tspan fill="#C9D1D9"> — AI/ML × Full-Stack × 3D Web</tspan>
+  <animate attributeName="opacity" values="0;0;1;1" keyTimes="0.0000;0.1650;0.1660;1.0000" dur="10.0s" repeatCount="indefinite"/>
+</text>
+<text x="28" y="158"><tspan fill="#00D4FF">$ </tspan><tspan fill="#E6EDF3">ls ./superpowers</tspan></text>
+<rect x="201.3" y="141" width="183.3" height="24" fill="#0B0F1A">
+  <animate attributeName="x" calcMode="discrete" values="28.0;28.0;37.6;47.3;56.9;66.5;76.2;85.8;95.4;105.0;114.7;124.3;133.9;143.6;153.2;162.8;172.5;182.1;191.7;201.3;201.3" keyTimes="0.0000;0.2600;0.2675;0.2750;0.2825;0.2900;0.2975;0.3050;0.3125;0.3200;0.3275;0.3350;0.3425;0.3500;0.3575;0.3650;0.3725;0.3800;0.3875;0.3950;1.0000" dur="10.0s" repeatCount="indefinite"/>
+</rect>
+<text x="28" y="190" opacity="1"><tspan fill="#00D4FF">▸ </tspan><tspan fill="#C9D1D9">Python · TypeScript · React · Next.js · Three.js · GSAP</tspan>
+  <animate attributeName="opacity" values="0;0;1;1" keyTimes="0.0000;0.4400;0.4410;1.0000" dur="10.0s" repeatCount="indefinite"/>
+</text>
+<text x="28" y="234"><tspan fill="#00D4FF">$ </tspan><tspan fill="#E6EDF3">./status --now</tspan></text>
+<rect x="182.1" y="217" width="164.1" height="24" fill="#0B0F1A">
+  <animate attributeName="x" calcMode="discrete" values="28.0;28.0;37.6;47.3;56.9;66.5;76.2;85.8;95.4;105.0;114.7;124.3;133.9;143.6;153.2;162.8;172.5;182.1;182.1" keyTimes="0.0000;0.5350;0.5425;0.5500;0.5575;0.5650;0.5725;0.5800;0.5875;0.5950;0.6025;0.6100;0.6175;0.6250;0.6325;0.6400;0.6475;0.6550;1.0000" dur="10.0s" repeatCount="indefinite"/>
+</rect>
+<text x="28" y="266" opacity="1"><tspan fill="#00D4FF">▸ </tspan><tspan fill="#3FB950">● </tspan><tspan fill="#7EE787">Open to Internships &amp; Collaboration — let&#x27;s build! 🚀</tspan>
+  <animate attributeName="opacity" values="0;0;1;1" keyTimes="0.0000;0.7000;0.7010;1.0000" dur="10.0s" repeatCount="indefinite"/>
+</text>
+<text x="28" y="306" fill="#00D4FF">$</text>
+<rect x="44" y="292" width="10" height="19" fill="#00D4FF">
+  <animate attributeName="opacity" values="1;0;1" dur="1.06s" repeatCount="indefinite"/>
+</rect>
+</g>
+</svg>
